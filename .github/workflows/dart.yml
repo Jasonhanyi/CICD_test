@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: install unzip tool
-      run: sudo apt-get install unzip
+      run:  apt-get install unzip
     - uses: actions/checkout@v2
     - name: Setup Flutter ${{ matrix.flutter-version }}
       uses: DanTup/gh-actions/setup-flutter@master

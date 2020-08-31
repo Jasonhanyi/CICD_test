@@ -16,8 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Flutter ${{ matrix.flutter-version }}
-      uses: DanTup/gh-actions/setup-flutter@master
+    - uses: takuyaohashi/setup-flutter@v1
+      with:
+        flutter-version: 'latest'
+        channel: 'stable'
+    - run: flutter test
     - name: Install dependencies
       run: pub get
     - name: Run tests
